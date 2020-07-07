@@ -90,7 +90,7 @@ class _HomeContentState extends State<HomeContent> {
     request('homePageBelowContent').then((val) {
       // var data = json.decode(val.toString());
       var data = val;
-      List<Map> newGoodsList = (data['data']['item'] as List).cast();
+      List<Map> newGoodsList = (data['item'] as List).cast();
       setState(() {
         hotGoodsList.addAll(newGoodsList);
         page++;
