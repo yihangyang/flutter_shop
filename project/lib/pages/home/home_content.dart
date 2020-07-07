@@ -147,7 +147,7 @@ class _HomeContentState extends State<HomeContent> {
         children: _listWidget,
       );
     } else {
-      return Text('no data');
+      return Text('no data, since hotGoodsList.length == 0');
     }
   }
   Widget _hotGoods() {
