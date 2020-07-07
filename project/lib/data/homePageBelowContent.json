@@ -4,14 +4,14 @@
     {
       "name": "Delsie Stella",
       "brand": "Clarks",
-      "price": 139.95,
+      "price": "139.95",
       "color": "black",
       "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/UltimasNovedades_v10.jpg"
     },
     {
       "name": "Edell",
       "brand": "Bandolino",
-      "price": 58.95,
+      "price": "58.95",
       "color": "black",
       "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliaTacon_v2.jpg"
     }
