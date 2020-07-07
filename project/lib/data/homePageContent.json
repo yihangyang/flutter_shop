@@ -1,0 +1,114 @@
+{
+  "banner": [{
+    "img": "https://images-eu.ssl-images-amazon.com/images/G/03/AMAZON-FASHION/2020/PRIVATE_LABEL/GW-Find-SS20/GW_HERO_ROTATOR_1242x450._CB431832638_SY300_.jpg"
+  }, {
+    "img": "https://images-eu.ssl-images-amazon.com/images/G/03/AmazonMusic/2020/ACQ/Evergreen/030620/DE-DE_030920_March_GW_Aquisition_ACQ_GW-Hero_M_1242x450_CV1._CB436176742_SY300_.jpg"
+  }, {
+    "img": "https://images-eu.ssl-images-amazon.com/images/G/03/kindle/journeys/NGU2YjIxODUt/NGU2YjIxODUt-MmE0ZmY3YzEt-w1242._CB428751819_SY300_.jpg"
+  }],
+  "category": [{
+    "id": 1,
+    "name": "ALL",
+    "img": "https://ae01.alicdn.com/kf/HTB1WKJJbErrK1RkSne1763rVVXa8.png_80x80Q70.png"
+  }, {
+    "id": 2,
+    "name": "Men",
+    "img": "https://ae01.alicdn.com/kf/HTB1jTFBbyzxK1RkSnaV760n9VXas.png_80x80Q70.png"
+  }, {
+    "id": 3,
+    "name": "Women",
+    "img": "https://ae01.alicdn.com/kf/HTB1jUVBbELrK1Rjy1zb763enFXaQ.png_80x80Q70.png"
+  }, {
+    "id": 4,
+    "name": "Handy",
+    "img": "https://ae01.alicdn.com/kf/HTB16_FBbyzxK1RkSnaV760n9VXaS.png_80x80Q70.png"
+  }, {
+    "id": 5,
+    "name": "Elctronic",
+    "img": "https://ae01.alicdn.com/kf/HTB1LSNDbyDxK1Rjy1zc761GeXXaN.png_80x80Q70.png"
+  }, {
+    "id": 6,
+    "name": "Computer",
+    "img": "https://ae01.alicdn.com/kf/HTB1pxtzbsnrK1RkHFrd760CoFXag.png_80x80Q70.png"
+  }, {
+    "id": 7,
+    "name": "Automobile",
+    "img": "https://ae01.alicdn.com/kf/HTB1cRT4INjaK1RjSZKz760VwXXab.png_80x80Q70.png"
+  }, {
+    "id": 8,
+    "name": "Home",
+    "img": "https://ae01.alicdn.com/kf/HTB1wQ8ybsfrK1Rjy0Fm760hEXXaq.png_80x80Q70.png"
+  }, {
+    "id": 9,
+    "name": "Sport",
+    "img": "https://ae01.alicdn.com/kf/HTB12f4IbvfsK1RjSszg761XzpXaI.png_80x80Q70.png"
+  }, {
+    "id": 10,
+    "name": "Jewelry",
+    "img": "https://ae01.alicdn.com/kf/HTB152ltbtfvK1RjSspo762fNpXap.png_80x80Q70.png"
+  }],
+  "adPic": [{
+    "url": "https://images-eu.ssl-images-amazon.com/images/G/03/DE-hq/2020/img/X_Site/XCM_Manual_1230297_1212990_DE_de_de_vat_deals_q3_2020_mobile_stripe_de_de_3151680_1242x200_de_DE._SX414_CB428360227_.jpg"
+  }],
+  "shopInfo": [{
+    "leaderImage": "https://www.lvm.de/medien/web/35407/s,x,320/telefonkontakt.jpg",
+    "leaderPhone": "017657761049"
+  }],
+  "sneaker": [{
+    "name": "Delsie Stella",
+    "brand": "Clarks",
+    "price": 139.95,
+    "color": "black",
+    "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/UltimasNovedades_v10.jpg"
+  }, {
+    "name": "Edell",
+    "brand": "Bandolino",
+    "price": 58.95,
+    "color": "black",
+    "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliaTacon_v2.jpg"
+  }, {
+    "name": "Haven",
+    "brand": "Aerosoles",
+    "price": 57.99,
+    "color": "brown",
+    "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/JoinLife_v2.jpg"
+  }, {
+    "name": "Jessica Bohemia Slide",
+    "brand": "Frye",
+    "price": 183.99,
+    "color": "brown",
+    "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/Havaianas_v2.jpg"
+  }, {
+    "name": "Gelata Fresca",
+    "brand": "Clarks",
+    "price": 139.95,
+    "color": "brown",
+    "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/BestSellers_v7.jpg"
+  }, {
+    "name": "Estee",
+    "brand": "Trotters",
+    "price": 129.95,
+    "color": "purple",
+    "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliasPlanas_v3.jpg"
+  }, {
+    "name": "Simone",
+    "brand": "Wanted",
+    "price": 39.95,
+    "color": "red",
+    "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliaTacon_v2.jpg"
+  }],
+  "floor": [{
+    "pictitle1": "https://picsum.photos/seed/picsum/750/50",
+    "pictitle2": "https://picsum.photos/seed/picsum/750/50",
+    "pic1": "https://picsum.photos/seed/picsum/350/300",
+    "pic2": "https://picsum.photos/seed/picsum/350/300",
+    "pic3": "https://picsum.photos/seed/picsum/200/300",
+    "lst": [{
+      "image1": "https://picsum.photos/seed/picsum/200/300",
+      "image2": "https://picsum.photos/seed/picsum/200/300",
+      "image3": "https://picsum.photos/seed/picsum/200/300",
+      "image4": "https://picsum.photos/seed/picsum/200/300",
+      "image5": "https://picsum.photos/seed/picsum/200/300"
+    }]
+  }]
+}
