@@ -48,28 +48,28 @@ class _HomeContentState extends State<HomeContent> {
                 // print(snapshot.data['sneaker'].toString());
                 // var data = json.decode(snapshot.data['sneaker'].toString());
                 var data = snapshot.data;
-                List<Map> swiper = (data['banner'] as List).cast();
-                List<Map> navgatorLst = (data['category'] as List).cast();
+                // List<Map> swiper = (data['banner'] as List).cast();
+                // List<Map> navgatorLst = (data['category'] as List).cast();
                 String adPic  = data['adPic'][0]['url'];
-                String leaderImage = data['shopInfo'][0]['leaderImage'];
-                String leaderPhone = data['shopInfo'][0]['leaderPhone'];
-                List<Map> recommendLst = (data['sneaker'] as List).cast();
-                String floor1Title = data['floor'][0]['pictitle1'];
-                String floor2Title = data['floor'][0]['pictitle2'];
-                String floor3Title = data['floor'][0]['pic1'];
-                List floorLst = data['floor'][0]['lst'];
-                print(floorLst[0]['image3']);
+                // String leaderImage = data['shopInfo'][0]['leaderImage'];
+                // String leaderPhone = data['shopInfo'][0]['leaderPhone'];
+                // List<Map> recommendLst = (data['sneaker'] as List).cast();
+                // String floor1Title = data['floor'][0]['pictitle1'];
+                // String floor2Title = data['floor'][0]['pictitle2'];
+                // String floor3Title = data['floor'][0]['pic1'];
+                // List floorLst = data['floor'][0]['lst'];
+                // print(data);
                 
                 return SingleChildScrollView(
                   child: Column(
                     children: <Widget>[
-                      HomeSwiper(swiperDataLst: swiper,),
-                      HomeTopNav(navLst: navgatorLst,),
-                      HomeAdBanner(adPic: adPic,),
-                      HomeCall(leaderImage: leaderImage, leaderPhone: leaderPhone,),
-                      HomeRecommend(recommendLst: recommendLst,),
-                      HomeFloor(pictureAdress: floor1Title, floorGoodsList: floorLst,),
-                      _hotGoods()
+                      // HomeSwiper(swiperDataLst: swiper,),
+                      // HomeTopNav(navLst: navgatorLst,),
+                      // HomeAdBanner(adPic: adPic,),
+                      // HomeCall(leaderImage: leaderImage, leaderPhone: leaderPhone,),
+                      // HomeRecommend(recommendLst: recommendLst,),
+                      // HomeFloor(pictureAdress: floor1Title, floorGoodsList: floorLst,),
+                      // _hotGoods()
                     ],
                   ),
                 );

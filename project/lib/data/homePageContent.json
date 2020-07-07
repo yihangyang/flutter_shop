@@ -57,43 +57,43 @@
   "sneaker": [{
     "name": "Delsie Stella",
     "brand": "Clarks",
-    "price": 139.95,
+    "price": "139.95",
     "color": "black",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/UltimasNovedades_v10.jpg"
   }, {
     "name": "Edell",
     "brand": "Bandolino",
-    "price": 58.95,
+    "price": "58.95",
     "color": "black",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliaTacon_v2.jpg"
   }, {
     "name": "Haven",
     "brand": "Aerosoles",
-    "price": 57.99,
+    "price": "57.99",
     "color": "brown",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/JoinLife_v2.jpg"
   }, {
     "name": "Jessica Bohemia Slide",
     "brand": "Frye",
-    "price": 183.99,
+    "price": "183.99",
     "color": "brown",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/Havaianas_v2.jpg"
   }, {
     "name": "Gelata Fresca",
     "brand": "Clarks",
-    "price": 139.95,
+    "price": "139.95",
     "color": "brown",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/BestSellers_v7.jpg"
   }, {
     "name": "Estee",
     "brand": "Trotters",
-    "price": 129.95,
+    "price": "129.95",
     "color": "purple",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliasPlanas_v3.jpg"
   }, {
     "name": "Simone",
     "brand": "Wanted",
-    "price": 39.95,
+    "price": "39.95",
     "color": "red",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliaTacon_v2.jpg"
   }],
