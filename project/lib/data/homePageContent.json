@@ -97,18 +97,18 @@
     "color": "red",
     "img": "https://static.pullandbear.net/2/static2/itxwebstandard/images/editorial/2019/parrillas/calzado/sra/SandaliaTacon_v2.jpg"
   }],
-  "floor": [{
-    "pictitle1": "https://picsum.photos/seed/picsum/750/50",
-    "pictitle2": "https://picsum.photos/seed/picsum/750/50",
-    "pic1": "https://picsum.photos/seed/picsum/350/300",
-    "pic2": "https://picsum.photos/seed/picsum/350/300",
-    "pic3": "https://picsum.photos/seed/picsum/200/300",
-    "lst": [{
-      "image1": "https://picsum.photos/seed/picsum/200/300",
-      "image2": "https://picsum.photos/seed/picsum/200/300",
-      "image3": "https://picsum.photos/seed/picsum/200/300",
-      "image4": "https://picsum.photos/seed/picsum/200/300",
-      "image5": "https://picsum.photos/seed/picsum/200/300"
-    }]
-  }]
+  "floor": {
+    "pictitle1": "https://picsum.photos/750/50?random=1",
+    "pictitle2": "https://picsum.photos/750/50?random=2",
+    "pic1": "https://picsum.photos/350/300?random=3",
+    "pic2": "https://picsum.photos/350/300?random=4",
+    "pic3": "https://picsum.photos/200/300?random=5",
+    "lst": {
+      "image1": "https://picsum.photos/200/300?random=6",
+      "image2": "https://picsum.photos/200/300?random=7",
+      "image3": "https://picsum.photos/200/300?random=8",
+      "image4": "https://picsum.photos/200/300?random=9",
+      "image5": "https://picsum.photos/200/300?random=10"
+    }
+  }
 }

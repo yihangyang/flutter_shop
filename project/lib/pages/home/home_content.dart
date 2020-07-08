@@ -2,12 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_shop/models/sneaker_model.dart';
 import 'package:flutter_shop/pages/home/widgets/home_ad_banner.dart';
 import 'package:flutter_shop/pages/home/widgets/home_call.dart';
 import 'package:flutter_shop/pages/home/widgets/home_floor.dart';
-import 'package:flutter_shop/pages/home/widgets/home_hot_good.dart';
+import 'package:flutter_shop/pages/home/widgets/home_hot_goods.dart';
 import 'package:flutter_shop/pages/home/widgets/home_swiper.dart';
 import 'package:flutter_shop/pages/home/widgets/home_top_nav.dart';
 import 'package:flutter_shop/pages/home/widgets/home_recommend.dart';
@@ -30,74 +31,83 @@ class _HomeContentState extends State<HomeContent> {
   List<Map> hotGoodsList = [];
   @override
   void initState() {
-    _getHotGoods();
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          FutureBuilder(
-            future: request('homePageContent'),
-            builder: (context, snapshot) {
-              if(!snapshot.hasData) {
-                return Center(child: CircularProgressIndicator());
-              }
-              if(snapshot.hasData){
-                // print(snapshot.data['sneaker'].toString());
-                // var data = json.decode(snapshot.data['sneaker'].toString());
-                var data = snapshot.data;
-                // List<Map> swiper = (data['banner'] as List).cast();
-                // List<Map> navgatorLst = (data['category'] as List).cast();
-                String adPic  = data['adPic'][0]['url'];
-                // String leaderImage = data['shopInfo'][0]['leaderImage'];
-                // String leaderPhone = data['shopInfo'][0]['leaderPhone'];
-                // List<Map> recommendLst = (data['sneaker'] as List).cast();
-                // String floor1Title = data['floor'][0]['pictitle1'];
-                // String floor2Title = data['floor'][0]['pictitle2'];
-                // String floor3Title = data['floor'][0]['pic1'];
-                // List floorLst = data['floor'][0]['lst'];
-                // print(data);
-                
-                return SingleChildScrollView(
-                  child: Column(
-                    children: <Widget>[
-                      // HomeSwiper(swiperDataLst: swiper,),
-                      // HomeTopNav(navLst: navgatorLst,),
-                      // HomeAdBanner(adPic: adPic,),
-                      // HomeCall(leaderImage: leaderImage, leaderPhone: leaderPhone,),
-                      // HomeRecommend(recommendLst: recommendLst,),
-                      // HomeFloor(pictureAdress: floor1Title, floorGoodsList: floorLst,),
-                      // _hotGoods()
-                    ],
-                  ),
-                );
-              } else {
-                return Center(
-                  child: Text("loading..."),
-                );
-              }
-            },
-          ),
-        ],
+    return Scaffold(
+      body: FutureBuilder(
+        future: request('homePageContent'),
+        builder: (context, snapshot) {
+          if(!snapshot.hasData) {
+            return Center(child: CircularProgressIndicator());
+          }
+          if(snapshot.hasData){
+            // print(snapshot.data['sneaker'].toString());
+            var data = json.decode(snapshot.data.toString());
+            // var data = snapshot.data.toList();
+            List<Map> swiper = (data['banner'] as List).cast();
+            List<Map> navgatorLst = (data['category'] as List).cast();
+            String adPic  = data['adPic'][0]['url'];
+            String leaderImage = data['shopInfo'][0]['leaderImage'];
+            String leaderPhone = data['shopInfo'][0]['leaderPhone'];
+            List<Map> recommendLst = (data['sneaker'] as List).cast();
+            String floor1Title = data['floor'][0]['pictitle1'];
+            String floor2Title = data['floor'][0]['pictitle2'];
+            // String floor3Title = data['floor'][0]['pic1'];
+            List floorLst = data['floor'][0]['lst'];
+            print(data['floor'][0]['lst'].toString());
+            
+            return EasyRefresh(
+              footer: ClassicalFooter(
+                bgColor: Colors.white,
+                textColor: Colors.pink,
+                infoColor: Colors.pink,
+                showInfo: true,
+                noMoreText: 'no more',
+                loadText: 'waiting...',
+                loadReadyText: 'Slipe Up To Load'
+              ),
+              child: ListView(
+                children: <Widget>[
+                  HomeSwiper(swiperDataLst: swiper,),
+                  HomeTopNav(navLst: navgatorLst,),
+                  HomeAdBanner(adPic: adPic,),
+                  HomeCall(leaderImage: leaderImage, leaderPhone: leaderPhone,),
+                  HomeRecommend(recommendLst: recommendLst,),
+                  HomeFloor(pictureAdress: floor1Title, floorGoodsList: floorLst,),
+                  _hotGoods()
+                ],
+              ),
+              onRefresh: () async {
+                print('onRefresh');
+              },
+              onLoad: () async {
+                print("onload");
+                await request('homePageBelowContent').then((val) {
+                // var data = json.decode(val.toString());
+                var data = val;
+                List<Map> newGoodsList = (data['item'] as List).cast();
+                setState(() {
+                  if(page < 2){
+                    hotGoodsList.addAll(newGoodsList);
+                  }
+                  page++;
+                });
+              });
+              },
+            );
+          } else {
+            return Center(
+              child: Text("loading..."),
+            );
+          }
+        },
       )
     );
   }
 
-  void _getHotGoods() {
-    // var formPage = {'page': page};
-    request('homePageBelowContent').then((val) {
-      // var data = json.decode(val.toString());
-      var data = val;
-      List<Map> newGoodsList = (data['item'] as List).cast();
-      setState(() {
-        hotGoodsList.addAll(newGoodsList);
-        page++;
-      });
-      print(data);
-    });
-  }
+  
 
   Widget _hotTitle = Container(
     margin: EdgeInsets.only(top: 10),

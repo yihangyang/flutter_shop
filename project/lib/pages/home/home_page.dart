@@ -7,10 +7,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final sneaker = ModalRoute.of(context).settings.arguments as SneakerModel;
-    return Container(
-      child: Container(
-        child: HomeContent(),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("SHOP"),
       ),
+      body: HomeContent(),
     );
   }
 }
