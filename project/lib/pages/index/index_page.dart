@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_shop/models/sneaker_model.dart';
 import 'package:flutter_shop/pages/cart/cart_page.dart';
 import 'package:flutter_shop/pages/category/category_page.dart';
 import 'package:flutter_shop/pages/home/home_page.dart';
-import 'package:flutter_shop/pages/member/member_page.dart';
+import 'package:flutter_shop/pages/me/me_page.dart';
 
 class IndexPage extends StatefulWidget {
   @override
@@ -36,7 +35,7 @@ class _IndexPageState extends State<IndexPage> {
     HomePage(),
     CategoryPage(),
     CartPage(),
-    MemberPage()
+    MePage()
   ];
   int curIndex = 0;
   var curPage;
@@ -50,7 +49,7 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(width: 750, height: 1334); 
-    final sneaker = ModalRoute.of(context).settings.arguments as SneakerModel;
+    // final sneaker = ModalRoute.of(context).settings.arguments as SneakerModel;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 245, 255, 246),
       bottomNavigationBar: BottomNavigationBar(

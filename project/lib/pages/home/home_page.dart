@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop/models/sneaker_model.dart';
 import 'package:flutter_shop/pages/home/home_content.dart';
 
 class HomePage extends StatelessWidget {

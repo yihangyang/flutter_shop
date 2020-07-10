@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeFloor extends StatelessWidget {
   final String pictureAdress;
-  final List floorGoodsList;
+  final Map floorGoodsMap;
 
-  const HomeFloor({Key key, this.pictureAdress, this.floorGoodsList}) : super(key: key);
+  const HomeFloor({Key key, this.pictureAdress, this.floorGoodsMap}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +13,7 @@ class HomeFloor extends StatelessWidget {
       child: Column(
         children: <Widget>[
           HomeFloorContent(
-            floorGoodsList: floorGoodsList,
+            floorGoodsMap: floorGoodsMap,
           ),
         ],
       )
@@ -22,9 +22,9 @@ class HomeFloor extends StatelessWidget {
 }
 
 class HomeFloorContent extends StatelessWidget {
-  final List floorGoodsList;
+  final Map floorGoodsMap;
 
-  const HomeFloorContent({Key key, this.floorGoodsList}) : super(key: key);
+  const HomeFloorContent({Key key, this.floorGoodsMap}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,11 +37,11 @@ class HomeFloorContent extends StatelessWidget {
   Widget _firstRow() {
     return Row(
       children: <Widget>[
-        _goodItem(floorGoodsList[0]['image1'],450),
+        _goodItem(floorGoodsMap['image1'],450),
         Column(
           children: <Widget>[
-            _goodItem(floorGoodsList[0]['image2'],300),
-            _goodItem(floorGoodsList[0]['image3'],150),
+            _goodItem(floorGoodsMap['image2'],300),
+            _goodItem(floorGoodsMap['image3'],150),
           ],
         ),
       ],
@@ -51,8 +51,8 @@ class HomeFloorContent extends StatelessWidget {
   Widget _sencondRow() {
     return Row(
       children: <Widget>[
-        _goodItem(floorGoodsList[0]['image4'],450),
-        _goodItem(floorGoodsList[0]['image5'],450),
+        _goodItem(floorGoodsMap['image4'],450),
+        _goodItem(floorGoodsMap['image5'],450),
       ],
     );
   }

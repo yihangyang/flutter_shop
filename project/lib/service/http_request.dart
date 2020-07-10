@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
 
 class HttpConfig {
-  static const String baseUrl = "https://www.easy-mock.com/mock/5effa4c8ea559b58ee7234b9/fluttershop/";
+  // static const String baseUrl = "https://www.easy-mock.com/mock/5effa4c8ea559b58ee7234b9/fluttershop/";
+  static const String baseUrl = 'https://raw.githubusercontent.com/yihangyang/flutter_shop/master/project/lib/data/';
+
   static const int timeout = 6000;
 }
 

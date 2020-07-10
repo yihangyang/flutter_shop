@@ -1,14 +1,11 @@
 import 'dart:convert';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_shop/models/sneaker_model.dart';
 import 'package:flutter_shop/pages/home/widgets/home_ad_banner.dart';
 import 'package:flutter_shop/pages/home/widgets/home_call.dart';
 import 'package:flutter_shop/pages/home/widgets/home_floor.dart';
-import 'package:flutter_shop/pages/home/widgets/home_hot_goods.dart';
 import 'package:flutter_shop/pages/home/widgets/home_swiper.dart';
 import 'package:flutter_shop/pages/home/widgets/home_top_nav.dart';
 import 'package:flutter_shop/pages/home/widgets/home_recommend.dart';
@@ -52,11 +49,12 @@ class _HomeContentState extends State<HomeContent> {
             String leaderImage = data['shopInfo'][0]['leaderImage'];
             String leaderPhone = data['shopInfo'][0]['leaderPhone'];
             List<Map> recommendLst = (data['sneaker'] as List).cast();
-            String floor1Title = data['floor'][0]['pictitle1'];
-            String floor2Title = data['floor'][0]['pictitle2'];
-            // String floor3Title = data['floor'][0]['pic1'];
-            List floorLst = data['floor'][0]['lst'];
-            print(data['floor'][0]['lst'].toString());
+            String floor1Title = data['floor']['pictitle1'];
+            String textTitle = data['floor']['pic1'];
+
+            String floor2Title = data['floor']['pictitle2'];
+            String floor3Title = data['floor']['pic1'];
+            Map floorMap = data['floor']['lst'];
             
             return EasyRefresh(
               footer: ClassicalFooter(
@@ -75,7 +73,7 @@ class _HomeContentState extends State<HomeContent> {
                   HomeAdBanner(adPic: adPic,),
                   HomeCall(leaderImage: leaderImage, leaderPhone: leaderPhone,),
                   HomeRecommend(recommendLst: recommendLst,),
-                  HomeFloor(pictureAdress: floor1Title, floorGoodsList: floorLst,),
+                  HomeFloor(pictureAdress: floor1Title, floorGoodsMap: floorMap,),
                   _hotGoods()
                 ],
               ),
@@ -85,8 +83,7 @@ class _HomeContentState extends State<HomeContent> {
               onLoad: () async {
                 print("onload");
                 await request('homePageBelowContent').then((val) {
-                // var data = json.decode(val.toString());
-                var data = val;
+                var data = json.decode(val.toString());
                 List<Map> newGoodsList = (data['item'] as List).cast();
                 setState(() {
                   if(page < 2){

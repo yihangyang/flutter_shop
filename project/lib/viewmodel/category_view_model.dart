@@ -1,20 +1,22 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_shop/models/category_model.dart';
-import 'package:flutter_shop/service/category_request.dart';
 
-class CategoryViewModel extends ChangeNotifier{
+class CategoryViewModel extends ChangeNotifier {
+  List<BxMallSubDto> _categoryList = [];
 
-  CategoryViewModel() {
-    CategoryRequest.getCategoryData().then((res) {
-      _categorys = res;
-      notifyListeners();
-    });
+  List<BxMallSubDto> get categoryList => _categoryList;
+
+  set categorys(List<BxMallSubDto> list){
+    BxMallSubDto all = BxMallSubDto(
+      mallSubId: '00',
+      mallCategoryId: '00',
+      mallSubName: 'All',
+      comments: '',
+    );
+    _categoryList = [all];
+    _categoryList.addAll(list);
+    notifyListeners();
   }
-  List<CategoryModel> _categorys = [];
-  // // SneakerViewModel _sneakerVM;
 
-  List<CategoryModel> get categorys {
-    return _categorys;
-  }
-  
 }

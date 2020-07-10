@@ -137,5 +137,10 @@
     "price": "130",
     "newPrice": "100",
     "image": "https://picsum.photos/200/300?random=23"
+  }, {
+    "name": "simple24",
+    "price": "130",
+    "newPrice": "100",
+    "image": "https://picsum.photos/200/300?random=24"
   }]
 }
