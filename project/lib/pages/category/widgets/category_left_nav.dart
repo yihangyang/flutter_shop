@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_shop/models/category_goods_model.dart';
 import 'package:flutter_shop/models/category_model.dart';
 import 'package:flutter_shop/service/service_methods.dart';
+import 'package:flutter_shop/viewmodel/category_goods_view_model.dart';
 import 'package:flutter_shop/viewmodel/category_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -47,8 +49,11 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
             setState(() {
               listIndex = index;
             });
+            print(listIndex);
             List<BxMallSubDto> childList = list[index].bxMallSubDto;
-            catVM.categorys = childList;
+            String categoryId = list[index].mallCategoryId;
+            catVM.setCategorys = childList;
+            _getGoodList(categoryId: categoryId);
           },
           child: Container(
             height: ScreenUtil().setHeight(100),
@@ -73,7 +78,21 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
         list = category.data;
       });
       // list.data.forEach((element) => print(element.mallCategoryName));
-      Provider.of<CategoryViewModel>(context, listen: false).categorys = list[0].bxMallSubDto;
+      Provider.of<CategoryViewModel>(context, listen: false).setCategorys = list[0].bxMallSubDto;
+    });
+  }
+
+  void _getGoodList({String categoryId}) async {
+    var data = {
+      'categoryId': categoryId==null ? '4' : categoryId,
+      'categorySubId': '',
+      'page': 1
+    };
+    await request('mallGoods').then((val) {
+      var data = json.decode(val.toString());
+      print(data['data'][2]);
+      CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
+      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data;
     });
   }
 }

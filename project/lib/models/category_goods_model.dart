@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-MallGoodsModel mallGoodsModelFromJson(String str) => MallGoodsModel.fromJson(json.decode(str));
+CategoryGoodsModel CategoryGoodsModelFromJson(String str) => CategoryGoodsModel.fromJson(json.decode(str));
 
-String mallGoodsModelToJson(MallGoodsModel data) => json.encode(data.toJson());
+String CategoryGoodsModelToJson(CategoryGoodsModel data) => json.encode(data.toJson());
 
-class MallGoodsModel {
-    MallGoodsModel({
+class CategoryGoodsModel {
+    CategoryGoodsModel({
         this.code,
         this.message,
         this.data,
@@ -13,12 +13,12 @@ class MallGoodsModel {
 
     String code;
     String message;
-    List<CategroyListData> data;
+    List<CategoryListData> data;
 
-    factory MallGoodsModel.fromJson(Map<String, dynamic> json) => MallGoodsModel(
+    factory CategoryGoodsModel.fromJson(Map<String, dynamic> json) => CategoryGoodsModel(
         code: json["code"],
         message: json["message"],
-        data: List<CategroyListData>.from(json["data"].map((x) => CategroyListData.fromJson(x))),
+        data: List<CategoryListData>.from(json["data"].map((x) => CategoryListData.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
@@ -28,8 +28,8 @@ class MallGoodsModel {
     };
 }
 
-class CategroyListData {
-    CategroyListData({
+class CategoryListData {
+    CategoryListData({
         this.image,
         this.oriPrice,
         this.presentPrice,
@@ -43,7 +43,7 @@ class CategroyListData {
     String goodsName;
     String goodsId;
 
-    factory CategroyListData.fromJson(Map<String, dynamic> json) => CategroyListData(
+    factory CategoryListData.fromJson(Map<String, dynamic> json) => CategoryListData(
         image: json["image"],
         oriPrice: json["oriPrice"].toDouble(),
         presentPrice: json["presentPrice"].toDouble(),

@@ -23,9 +23,9 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
         builder: (ctx, catVM, child) {
           return ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: catVM.categoryList.length,
+            itemCount: catVM.getCategoryList.length,
             itemBuilder: (context, index) {
-              return _rightInkWell(catVM.categoryList[index]);
+              return _rightInkWell(catVM.getCategoryList[index]);
             }
           );
         }

@@ -5,9 +5,9 @@ import 'package:flutter_shop/models/category_model.dart';
 class CategoryViewModel extends ChangeNotifier {
   List<BxMallSubDto> _categoryList = [];
 
-  List<BxMallSubDto> get categoryList => _categoryList;
+  List<BxMallSubDto> get getCategoryList => _categoryList;
 
-  set categorys(List<BxMallSubDto> list){
+  set setCategorys(List<BxMallSubDto> list){
     BxMallSubDto all = BxMallSubDto(
       mallSubId: '00',
       mallCategoryId: '00',
@@ -18,5 +18,7 @@ class CategoryViewModel extends ChangeNotifier {
     _categoryList.addAll(list);
     notifyListeners();
   }
+  
+  // int get id => _categoryList.categoryId;
 
 }
