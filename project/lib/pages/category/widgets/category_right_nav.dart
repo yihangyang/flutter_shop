@@ -1,6 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_shop/models/category_goods_model.dart';
 import 'package:flutter_shop/models/category_model.dart';
+import 'package:flutter_shop/service/service_methods.dart';
+import 'package:flutter_shop/viewmodel/category_goods_view_model.dart';
 import 'package:flutter_shop/viewmodel/category_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +30,7 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
             scrollDirection: Axis.horizontal,
             itemCount: catVM.getCategoryList.length,
             itemBuilder: (context, index) {
-              return _rightInkWell(catVM.getCategoryList[index]);
+              return _rightInkWell(catVM.getCategoryList[index], index);
             }
           );
         }
@@ -33,20 +38,44 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
     );
   }
 
-  Widget _rightInkWell(BxMallSubDto item) {
-    return InkWell(
-      onTap: () {
-        print(item.mallSubName);
-      },
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-        child: Text(
-          item.mallSubName,
-          style: TextStyle(
-            fontSize: ScreenUtil().setSp(28)
+  Widget _rightInkWell(BxMallSubDto item, int index) {
+    bool isClick = false;
+    return Consumer<CategoryViewModel>(
+      builder: (ctx, cVM, child) {
+        isClick = (index == cVM.childIndex) ? true:false;
+        return InkWell(
+          onTap: () {
+            print(item.mallSubName);
+            cVM.changeChildIndex(index, item.mallCategoryId);
+            _getGoodList(item.mallSubId);
+
+          },
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+            child: Text(
+              item.mallSubName,
+              style: TextStyle(
+                fontSize: ScreenUtil().setSp(28),
+                color: isClick ? Colors.pink : Colors.black
+              ),
+            ),
           ),
-        ),
-      ),
+        );
+      }
     );
+  }
+  
+  void _getGoodList(String categorySubId)  {
+    var data = {
+      'categoryId': Provider.of<CategoryViewModel>(context).categoryId,
+      'categorySubId': 'categorySubId',
+      'page': 1
+    };
+    request('mallGoods').then((val) {
+      var data = json.decode(val.toString());
+      // print(data['data'][1]);
+      CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
+      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data;
+    });
   }
 }

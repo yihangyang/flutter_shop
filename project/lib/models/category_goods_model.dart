@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-CategoryGoodsModel CategoryGoodsModelFromJson(String str) => CategoryGoodsModel.fromJson(json.decode(str));
+CategoryGoodsModel categoryGoodsModelFromJson(String str) => CategoryGoodsModel.fromJson(json.decode(str));
 
-String CategoryGoodsModelToJson(CategoryGoodsModel data) => json.encode(data.toJson());
+String categoryGoodsModelToJson(CategoryGoodsModel data) => json.encode(data.toJson());
 
 class CategoryGoodsModel {
     CategoryGoodsModel({

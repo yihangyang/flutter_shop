@@ -19,18 +19,19 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: ScreenUtil().setWidth(570),
-      height: ScreenUtil().setHeight(1000),
-      child: Consumer<CategoryGoodsViewModel>(
-        builder: (context, cVM, child) {
-          return ListView.builder(
-            itemCount: cVM.getGoodsList.length,
-            itemBuilder: (context, index){
-              return _listWidget(cVM.getGoodsList, index);
-            },
-          );
-        },
+    return Expanded(
+      child: Container(
+        width: ScreenUtil().setWidth(570),
+        child: Consumer<CategoryGoodsViewModel>(
+          builder: (context, cVM, child) {
+            return ListView.builder(
+              itemCount: cVM.getGoodsList.length,
+              itemBuilder: (context, index){
+                return _listWidget(cVM.getGoodsList, index);
+              },
+            );
+          },
+        ),
       ),
     );
     
@@ -64,18 +65,15 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
         ),
       )
     );
-
   }
-  //商品图片
-  Widget _goodsImage(List newList,int index){
 
+  Widget _goodsImage(List newList,int index){
     return  Container(
       width: ScreenUtil().setWidth(200),
       child: Image.network(newList[index].image),
     );
-
   }
-  //商品名称方法
+
   Widget _goodsName(List newList,int index){
     return Container( 
       padding: EdgeInsets.all(5.0),
@@ -85,8 +83,8 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
         style: TextStyle(fontSize: ScreenUtil().setSp(28)),
-        ),
-      );
+      ),
+    );
   }
 
   Widget _goodsPrice(List newList,int index){
@@ -95,18 +93,17 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
       width: ScreenUtil().setWidth(370),
       child:Row(
         children: <Widget>[
-            Text(
-              '价格:￥${newList[index].presentPrice}',
-              style: TextStyle(color:Colors.pink,fontSize:ScreenUtil().setSp(30)),
-              ),
-            Text(
-              
-              '￥${newList[index].oriPrice}',
-              style: TextStyle(
-                color: Colors.black26,
-                decoration: TextDecoration.lineThrough
-              ),
-            )
+          Text(
+            'Price: \$ ${newList[index].presentPrice}',
+            style: TextStyle(color:Colors.pink,fontSize:ScreenUtil().setSp(30)),
+            ),
+          Text(
+            '\$ ${newList[index].oriPrice}',
+            style: TextStyle(
+              color: Colors.black26,
+              decoration: TextDecoration.lineThrough
+            ),
+          )
         ]
       )
     );

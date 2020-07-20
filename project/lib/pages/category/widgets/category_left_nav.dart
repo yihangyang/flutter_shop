@@ -49,10 +49,9 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
             setState(() {
               listIndex = index;
             });
-            print(listIndex);
             List<BxMallSubDto> childList = list[index].bxMallSubDto;
             String categoryId = list[index].mallCategoryId;
-            catVM.setCategorys = childList;
+            catVM.getCategorys(childList, categoryId);
             _getGoodList(categoryId: categoryId);
           },
           child: Container(
@@ -77,20 +76,19 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
       setState(() {
         list = category.data;
       });
-      // list.data.forEach((element) => print(element.mallCategoryName));
-      Provider.of<CategoryViewModel>(context, listen: false).setCategorys = list[0].bxMallSubDto;
+      Provider.of<CategoryViewModel>(context, listen: false).getCategorys(list[0].bxMallSubDto, list[0].mallCategoryId);
     });
   }
 
-  void _getGoodList({String categoryId}) async {
+  void _getGoodList({String categoryId})  {
     var data = {
       'categoryId': categoryId==null ? '4' : categoryId,
       'categorySubId': '',
       'page': 1
     };
-    await request('mallGoods').then((val) {
+    request('mallGoods').then((val) {
       var data = json.decode(val.toString());
-      print(data['data'][2]);
+      // print(data['data'][1]);
       CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
       Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data;
     });

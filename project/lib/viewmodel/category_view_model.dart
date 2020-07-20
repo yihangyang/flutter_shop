@@ -4,10 +4,32 @@ import 'package:flutter_shop/models/category_model.dart';
 
 class CategoryViewModel extends ChangeNotifier {
   List<BxMallSubDto> _categoryList = [];
+  int childIndex = 0; // child list highlight index
+  String categoryId = '4'; // left_categoryID
+  String subId = ''; // right_categoryID
+  int page = 1; // list page
 
   List<BxMallSubDto> get getCategoryList => _categoryList;
 
-  set setCategorys(List<BxMallSubDto> list){
+  // switch left_category, should return to 0
+  // set setCategorys(List<BxMallSubDto> list){
+  //   childIndex = 0;
+    
+  //   BxMallSubDto all = BxMallSubDto(
+  //     mallSubId: '00',
+  //     mallCategoryId: '00',
+  //     mallSubName: 'All',
+  //     comments: '',
+  //   );
+  //   _categoryList = [all];
+  //   _categoryList.addAll(list);
+  //   notifyListeners();
+  // }
+
+  getCategorys(List<BxMallSubDto> list, String id){
+    childIndex = 0;
+    categoryId = id;
+    
     BxMallSubDto all = BxMallSubDto(
       mallSubId: '00',
       mallCategoryId: '00',
@@ -18,7 +40,13 @@ class CategoryViewModel extends ChangeNotifier {
     _categoryList.addAll(list);
     notifyListeners();
   }
-  
-  // int get id => _categoryList.categoryId;
+
+
+  // change right_category index
+  changeChildIndex(index, String id) {
+    childIndex = index;
+    subId = id;
+    notifyListeners();
+  }
 
 }

@@ -1,0 +1,71 @@
+{
+  "code": "0",
+  "message": "success",
+  "data": {
+    "sale": [{
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+      "oriPrice": 2.50,
+      "presentPrice": 1.80,
+      "goodsName": "sale1",
+      "goodsId": "3194330cf25f43c3934dbb8c2a964ade"
+    }, {
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+      "oriPrice": 2.00,
+      "presentPrice": 1.80,
+      "goodsName": "sale2",
+      "goodsId": "522a3511f4c545ab9547db074bb51579"
+    }],
+    "neu": [{
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+      "oriPrice": 2.50,
+      "presentPrice": 1.80,
+      "goodsName": "neu1",
+      "goodsId": "3194330cf25f43c3934dbb8c2a964ade"
+    }, {
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+      "oriPrice": 2.00,
+      "presentPrice": 1.80,
+      "goodsName": "neu2",
+      "goodsId": "522a3511f4c545ab9547db074bb51579"
+    }],
+    "kleider": [{
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+      "oriPrice": 2.50,
+      "presentPrice": 1.80,
+      "goodsName": "kleider1",
+      "goodsId": "3194330cf25f43c3934dbb8c2a964ade"
+    }, {
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+      "oriPrice": 2.00,
+      "presentPrice": 1.80,
+      "goodsName": "kleider2",
+      "goodsId": "522a3511f4c545ab9547db074bb51579"
+    }],
+    "schuhe": [{
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+      "oriPrice": 2.50,
+      "presentPrice": 1.80,
+      "goodsName": "schuhe1",
+      "goodsId": "3194330cf25f43c3934dbb8c2a964ade"
+    }, {
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+      "oriPrice": 2.00,
+      "presentPrice": 1.80,
+      "goodsName": "schuhe2",
+      "goodsId": "522a3511f4c545ab9547db074bb51579"
+    }],
+    "tasche": [{
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+      "oriPrice": 2.50,
+      "presentPrice": 1.80,
+      "goodsName": "tasche1",
+      "goodsId": "3194330cf25f43c3934dbb8c2a964ade"
+    }, {
+      "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+      "oriPrice": 2.00,
+      "presentPrice": 1.80,
+      "goodsName": "tasche2",
+      "goodsId": "522a3511f4c545ab9547db074bb51579"
+    }]
+  }
+} 
