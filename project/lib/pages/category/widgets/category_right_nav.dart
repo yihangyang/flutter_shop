@@ -38,7 +38,7 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
     );
   }
 
-  Widget _rightInkWell(BxMallSubDto item, int index) {
+  Widget _rightInkWell(SubCategory item, int index) {
     bool isClick = false;
     return Consumer<CategoryViewModel>(
       builder: (ctx, cVM, child) {
@@ -67,13 +67,13 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
   
   void _getGoodList(String categorySubId)  {
     var data = {
-      'categoryId': Provider.of<CategoryViewModel>(context).categoryId,
-      'categorySubId': 'categorySubId',
+      'categoryId': Provider.of<CategoryViewModel>(context, listen: false).categoryId,
+      'categorySubId': categorySubId,
       'page': 1
     };
-    request('mallGoods').then((val) {
+    request('kleider').then((val) {
       var data = json.decode(val.toString());
-      // print(data['data'][1]);
+      print(data['data'][1]);
       CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
       Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data;
     });

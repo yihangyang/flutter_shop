@@ -49,7 +49,7 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
             setState(() {
               listIndex = index;
             });
-            List<BxMallSubDto> childList = list[index].bxMallSubDto;
+            List<SubCategory> childList = list[index].subCategory;
             String categoryId = list[index].mallCategoryId;
             catVM.getCategorys(childList, categoryId);
             _getGoodList(categoryId: categoryId);
@@ -76,7 +76,7 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
       setState(() {
         list = category.data;
       });
-      Provider.of<CategoryViewModel>(context, listen: false).getCategorys(list[0].bxMallSubDto, list[0].mallCategoryId);
+      Provider.of<CategoryViewModel>(context, listen: false).getCategorys(list[0].subCategory, list[0].mallCategoryId);
     });
   }
 
@@ -86,7 +86,7 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
       'categorySubId': '',
       'page': 1
     };
-    request('mallGoods').then((val) {
+    request('kleider').then((val) {
       var data = json.decode(val.toString());
       // print(data['data'][1]);
       CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);

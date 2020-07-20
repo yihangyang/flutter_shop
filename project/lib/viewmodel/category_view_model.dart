@@ -3,13 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_shop/models/category_model.dart';
 
 class CategoryViewModel extends ChangeNotifier {
-  List<BxMallSubDto> _categoryList = [];
+  List<SubCategory> _categoryList = [];
   int childIndex = 0; // child list highlight index
-  String categoryId = '4'; // left_categoryID
+  String categoryId = '1'; // left_categoryID
   String subId = ''; // right_categoryID
   int page = 1; // list page
 
-  List<BxMallSubDto> get getCategoryList => _categoryList;
+  List<SubCategory> get getCategoryList => _categoryList;
 
   // switch left_category, should return to 0
   // set setCategorys(List<BxMallSubDto> list){
@@ -26,11 +26,11 @@ class CategoryViewModel extends ChangeNotifier {
   //   notifyListeners();
   // }
 
-  getCategorys(List<BxMallSubDto> list, String id){
+  getCategorys(List<SubCategory> list, String id){
     childIndex = 0;
     categoryId = id;
     
-    BxMallSubDto all = BxMallSubDto(
+    SubCategory all = SubCategory(
       mallSubId: '00',
       mallCategoryId: '00',
       mallSubName: 'All',

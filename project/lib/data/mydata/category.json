@@ -5,7 +5,7 @@
     {
         "mallCategoryId":"1",
         "mallCategoryName":"Sale",
-        "bxMallSubDto":[
+        "subCategory":[
             {
                 "mallSubId":"11",
                 "mallCategoryId":"1",
@@ -36,7 +36,7 @@
     {
         "mallCategoryId":"2",
         "mallCategoryName":"Neu",
-        "bxMallSubDto":[
+        "subCategory":[
           {
             "mallSubId":"21",
             "mallCategoryId":"2",
@@ -54,7 +54,7 @@
     {
         "mallCategoryId":"3",
         "mallCategoryName":"Kleider",
-        "bxMallSubDto":[
+        "subCategory":[
           {
               "mallSubId":"31",
               "mallCategoryId":"3",
@@ -78,7 +78,7 @@
     {
         "mallCategoryId":"4",
         "mallCategoryName":"Schuhe",
-        "bxMallSubDto":[
+        "subCategory":[
             {
                 "mallSubId":"41",
                 "mallCategoryId":"4",
@@ -97,7 +97,7 @@
     {
         "mallCategoryId":"5",
         "mallCategoryName":"Taschen",
-        "bxMallSubDto":[
+        "subCategory":[
             {
                 "mallSubId":"51",
                 "mallCategoryId":"5",
@@ -116,7 +116,7 @@
     {
         "mallCategoryId":"6",
         "mallCategoryName":"Accessoires",
-        "bxMallSubDto":[
+        "subCategory":[
           {
               "mallSubId":"61",
               "mallCategoryId":"6",
@@ -138,26 +138,26 @@
           {
             "mallSubId":"64",
             "mallCategoryId":"6",
-            "mallSubName":"Gürtel",
-            "comments":"Sonnenbrille"
+            "mallSubName":"Sonnenbrille",
+            "comments":""
           },
           {
             "mallSubId":"65",
             "mallCategoryId":"6",
-            "mallSubName":"Gürtel",
-            "comments":"Handyhülle"
+            "mallSubName":"Handyhülle",
+            "comments":""
           },
           {
             "mallSubId":"66",
             "mallCategoryId":"6",
-            "mallSubName":"Gürtel",
-            "comments":"Strumpfhosen und Socken"
+            "mallSubName":"Strumpfhosen und Socken",
+            "comments":""
           },
           {
             "mallSubId":"67",
             "mallCategoryId":"6",
-            "mallSubName":"Gürtel",
-            "comments":"Nagellack"
+            "mallSubName":"Nagellack",
+            "comments":""
           },
           {
               "mallSubId":"68",
@@ -172,7 +172,7 @@
     {
         "mallCategoryId":"7",
         "mallCategoryName":"Trends",
-        "bxMallSubDto":[
+        "subCategory":[
             {
                 "mallSubId":"71",
                 "mallCategoryId":"7",

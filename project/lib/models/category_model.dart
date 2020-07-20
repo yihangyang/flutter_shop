@@ -17,12 +17,12 @@ class CategoryModel {
 
     String code;
     String message;
-    List<Data> data;
+    List<Category> data;
 
     factory CategoryModel.fromJson(Map<String, dynamic> json) => CategoryModel(
         code: json["code"],
         message: json["message"],
-        data: List<Data>.from(json["data"].map((x) => Data.fromJson(x))),
+        data: List<Category>.from(json["data"].map((x) => Category.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
@@ -32,25 +32,25 @@ class CategoryModel {
     };
 }
 
-class Data {
-    Data({
+class Category {
+    Category({
         this.mallCategoryId,
         this.mallCategoryName,
-        this.bxMallSubDto,
+        this.subCategory,
         this.comments,
         this.image,
     });
 
     String mallCategoryId;
     String mallCategoryName;
-    List<BxMallSubDto> bxMallSubDto;
+    List<SubCategory> subCategory;
     dynamic comments;
     String image;
 
-    factory Data.fromJson(Map<String, dynamic> json) => Data(
+    factory Category.fromJson(Map<String, dynamic> json) => Category(
         mallCategoryId: json["mallCategoryId"],
         mallCategoryName: json["mallCategoryName"],
-        bxMallSubDto: List<BxMallSubDto>.from(json["bxMallSubDto"].map((x) => BxMallSubDto.fromJson(x))),
+        subCategory: List<SubCategory>.from(json["subCategory"].map((x) => SubCategory.fromJson(x))),
         comments: json["comments"],
         image: json["image"],
     );
@@ -58,14 +58,14 @@ class Data {
     Map<String, dynamic> toJson() => {
         "mallCategoryId": mallCategoryId,
         "mallCategoryName": mallCategoryName,
-        "bxMallSubDto": List<dynamic>.from(bxMallSubDto.map((x) => x.toJson())),
+        "subCategory": List<dynamic>.from(subCategory.map((x) => x.toJson())),
         "comments": comments,
         "image": image,
     };
 }
 
-class BxMallSubDto {
-    BxMallSubDto({
+class SubCategory {
+    SubCategory({
         this.mallSubId,
         this.mallCategoryId,
         this.mallSubName,
@@ -77,18 +77,17 @@ class BxMallSubDto {
     String mallSubName;
     String comments;
 
-    factory BxMallSubDto.fromJson(Map<String, dynamic> json) => BxMallSubDto(
+    factory SubCategory.fromJson(Map<String, dynamic> json) => SubCategory(
         mallSubId: json["mallSubId"],
         mallCategoryId: json["mallCategoryId"],
         mallSubName: json["mallSubName"],
-        comments: json["comments"] == null ? null : json["comments"],
+        comments: json["comments"],
     );
 
     Map<String, dynamic> toJson() => {
         "mallSubId": mallSubId,
         "mallCategoryId": mallCategoryId,
         "mallSubName": mallSubName,
-        "comments": comments == null ? null : comments,
+        "comments": comments,
     };
-    
 }
