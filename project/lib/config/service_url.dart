@@ -25,6 +25,7 @@ const serviceUrl = 'https://raw.githubusercontent.com/yihangyang/flutter_shop/ma
 const servicePath = {
   'homePageContent': serviceUrl + 'homePageContent.json', // home page info
   'homePageBelowContent': serviceUrl + 'homePageBelowContent.json', // home page hot sales
-  'category': serviceUrl + 'category.json', // getCategory
+  'category': serviceUrl + 'mydata/category.json', // getCategory
   'mallGoods': serviceUrl + 'mallGoods.json', // mall Goods
+  'kleider': serviceUrl + "mydata/kleider.json"
 };
