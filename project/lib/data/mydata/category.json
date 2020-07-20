@@ -7,26 +7,26 @@
         "mallCategoryName":"Sale",
         "bxMallSubDto":[
             {
-                "mallSubId":"2c9f6c94621970a801626a35cb4d0175",
-                "mallCategoryId":"4",
+                "mallSubId":"11",
+                "mallCategoryId":"1",
                 "mallSubName":"Sale-Favoriten",
                 "comments":""
             },
             {
-                "mallSubId":"2c9f6c94621970a801626a363e5a0176",
-                "mallCategoryId":"4",
+                "mallSubId":"12",
+                "mallCategoryId":"1",
                 "mallSubName":"Kleidung",
                 "comments":""
             },
             {
-                "mallSubId":"2c9f6c94621970a801626a3770620177",
-                "mallCategoryId":"4",
+                "mallSubId":"13",
+                "mallCategoryId":"1",
                 "mallSubName":"Schuhe",
                 "comments":""
             },
             {
-                "mallSubId":"2c9f6c94621970a801626a3770620177",
-                "mallCategoryId":"4",
+                "mallSubId":"14",
+                "mallCategoryId":"1",
                 "mallSubName":"Accessoires",
                 "comments":""
             }],
@@ -37,12 +37,17 @@
         "mallCategoryId":"2",
         "mallCategoryName":"Neu",
         "bxMallSubDto":[
-            {
-                "mallSubId":"2c9f6c946016ea9b016016f79c8e0000",
-                "mallCategoryId":"2",
-                "mallSubName":"neu1",
-                "comments":""
-            }],
+          {
+            "mallSubId":"21",
+            "mallCategoryId":"2",
+            "mallSubName":"neu1",
+            "comments":""
+          },{
+            "mallSubId":"22",
+            "mallCategoryId":"2",
+            "mallSubName":"neu1",
+            "comments":""
+          }],
         "comments":null,
         "image":"http://images.baixingliangfan.cn/firstCategoryPicture/20190131/20190131170044_9165.png"
     },
@@ -51,17 +56,17 @@
         "mallCategoryName":"Kleider",
         "bxMallSubDto":[
           {
-              "mallSubId":"2c9f6c9460337d540160337fefd60000",
+              "mallSubId":"31",
               "mallCategoryId":"3",
               "mallSubName":"Kleider",
               "comments":""
           },{
-            "mallSubId":"2c9f6c9460337d540160337fefd60000",
+            "mallSubId":"32",
             "mallCategoryId":"3",
             "mallSubName":"T-shirt",
             "comments":""
           },{
-            "mallSubId":"2c9f6c9460337d540160337fefd60000",
+            "mallSubId":"33",
             "mallCategoryId":"3",
             "mallSubName":"Shorts",
             "comments":""
@@ -75,13 +80,13 @@
         "mallCategoryName":"Schuhe",
         "bxMallSubDto":[
             {
-                "mallSubId":"402880e86016d1b5016016e135440011",
+                "mallSubId":"41",
                 "mallCategoryId":"4",
                 "mallSubName":"sandaler",
                 "comments":""
             },
             {
-                "mallSubId":"402880e86016d1b5016016e171cc0012",
+                "mallSubId":"42",
                 "mallCategoryId":"4",
                 "mallSubName":"Sportschuhe",
                 "comments":""
@@ -94,13 +99,13 @@
         "mallCategoryName":"Taschen",
         "bxMallSubDto":[
             {
-                "mallSubId":"2c9f6c94609a62be0160a02d1dc20021",
+                "mallSubId":"51",
                 "mallCategoryId":"5",
                 "mallSubName":"Taschen1",
                 "comments":""
             },
             {
-                "mallSubId":"2c9f6c94648837980164883ff6980000",
+                "mallSubId":"52",
                 "mallCategoryId":"5",
                 "mallSubName":"Taschen2",
                 "comments":""
@@ -112,47 +117,78 @@
         "mallCategoryId":"6",
         "mallCategoryName":"Accessoires",
         "bxMallSubDto":[
-            {
-                "mallSubId":"2c9f6c946449ea7e01647d02f6250026",
-                "mallCategoryId":"2c9f6c946449ea7e01647ccd76a6001b",
-                "mallSubName":"Punge",
-                "comments":""
-            },
-            {
-                "mallSubId":"2c9f6c946449ea7e01647d031bae0027",
-                "mallCategoryId":"2c9f6c946449ea7e01647ccd76a6001b",
-                "mallSubName":"Schmuck",
-                "comments":""
-            },
-            {
-                "mallSubId":"2c9f6c946449ea7e01647d03428f0028",
-                "mallCategoryId":"2c9f6c946449ea7e01647ccd76a6001b",
-                "mallSubName":"Gürtel",
-                "comments":""
-            }],
+          {
+              "mallSubId":"61",
+              "mallCategoryId":"6",
+              "mallSubName":"Punge",
+              "comments":""
+          },
+          {
+              "mallSubId":"62",
+              "mallCategoryId":"6",
+              "mallSubName":"Schmuck",
+              "comments":""
+          },
+          {
+            "mallSubId":"63",
+            "mallCategoryId":"6",
+            "mallSubName":"Gürtel",
+            "comments":""
+          },
+          {
+            "mallSubId":"64",
+            "mallCategoryId":"6",
+            "mallSubName":"Gürtel",
+            "comments":"Sonnenbrille"
+          },
+          {
+            "mallSubId":"65",
+            "mallCategoryId":"6",
+            "mallSubName":"Gürtel",
+            "comments":"Handyhülle"
+          },
+          {
+            "mallSubId":"66",
+            "mallCategoryId":"6",
+            "mallSubName":"Gürtel",
+            "comments":"Strumpfhosen und Socken"
+          },
+          {
+            "mallSubId":"67",
+            "mallCategoryId":"6",
+            "mallSubName":"Gürtel",
+            "comments":"Nagellack"
+          },
+          {
+              "mallSubId":"68",
+              "mallCategoryId":"6",
+              "mallSubName":"Parfümerie",
+              "comments":""
+          }
+        ],
         "comments":null,
         "image":"http://images.baixingliangfan.cn/firstCategoryPicture/20190131/20190131170124_4760.png"
     },
     {
-        "mallCategoryId":"2c9f6c946449ea7e01647ccf3b97001d",
+        "mallCategoryId":"7",
         "mallCategoryName":"Trends",
         "bxMallSubDto":[
             {
-                "mallSubId":"2c9f6c946449ea7e01647dc18e610035",
-                "mallCategoryId":"2c9f6c946449ea7e01647ccf3b97001d",
-                "mallSubName":"熟食",
+                "mallSubId":"71",
+                "mallCategoryId":"7",
+                "mallSubName":"Summer looks",
                 "comments":""
             },
             {
-                "mallSubId":"2c9f6c946449ea7e01647dc1d9070036",
-                "mallCategoryId":"2c9f6c946449ea7e01647ccf3b97001d",
-                "mallSubName":"火腿",
+                "mallSubId":"72",
+                "mallCategoryId":"7",
+                "mallSubName":"Twinsets",
                 "comments":""
             },
             {
-                "mallSubId":"2c9f6c946449ea7e01647dc1fc3e0037",
-                "mallCategoryId":"2c9f6c946449ea7e01647ccf3b97001d",
-                "mallSubName":"速冻食品",
+                "mallSubId":"73",
+                "mallCategoryId":"7",
+                "mallSubName":"Comfy",
                 "comments":""
             }],
         "comments":null,
