@@ -45,7 +45,6 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
         isClick = (index == cVM.childIndex) ? true:false;
         return InkWell(
           onTap: () {
-            print(item.mallSubName + '_rightInkWell');
             cVM.changeChildIndex(index, item.mallCategoryId);
             _getGoodList(item.mallSubId);
           },
@@ -65,6 +64,7 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
   }
   
   void _getGoodList(String categorySubId)  {
+    // categorySubId == 11,12,13,21,22,23,31,32,33
     var data = {
       'categoryId': Provider.of<CategoryViewModel>(context, listen: false).categoryId,
       'categorySubId': categorySubId,
@@ -72,16 +72,16 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
     };
     request('kleider').then((val) {
       var data = json.decode(val.toString());
-      // print(goodsList.data.kleider);
-      // print(data['data'][1] + " _getGoodList");
       CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
-      print(goodsList.data.sale);
-      print(Fruit.values[1]);
-      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data.sale;
+      // categorySubId = 11,12,13 => 1,2,3 => 0,1,2
+      // print(goodsList.data[0][int.parse(categorySubId) - 10 - 1].goodsName);
+      
+      int categoryId = int.parse(categorySubId) ~/ 10 - 1;
+      int subId = int.parse(categorySubId) % 10 - 1;
+      print(goodsList.data[categoryId][subId].goodsName);
+      //Kleider result = goodsList.data[categoryId][subId];
+      List<Kleider> result = goodsList.data[categoryId].where((key) => key.goodsId == categorySubId).toList(); 
+      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = result;
     });
   }
-}
-
-enum Fruit {
-  apple, banana
 }

@@ -17,50 +17,18 @@ class CategoryGoodsModel {
 
     String code;
     String message;
-    Data data;
+    List<List<Kleider>> data;
 
     factory CategoryGoodsModel.fromJson(Map<String, dynamic> json) => CategoryGoodsModel(
         code: json["code"],
         message: json["message"],
-        data: Data.fromJson(json["data"]),
+        data: List<List<Kleider>>.from(json["data"].map((x) => List<Kleider>.from(x.map((x) => Kleider.fromJson(x))))),
     );
 
     Map<String, dynamic> toJson() => {
         "code": code,
         "message": message,
-        "data": data.toJson(),
-    };
-}
-
-class Data {
-    Data({
-        this.sale,
-        this.neu,
-        this.kleider,
-        this.schuhe,
-        this.tasche,
-    });
-
-    List<Kleider> sale;
-    List<Kleider> neu;
-    List<Kleider> kleider;
-    List<Kleider> schuhe;
-    List<Kleider> tasche;
-
-    factory Data.fromJson(Map<String, dynamic> json) => Data(
-        sale: List<Kleider>.from(json["sale"].map((x) => Kleider.fromJson(x))),
-        neu: List<Kleider>.from(json["neu"].map((x) => Kleider.fromJson(x))),
-        kleider: List<Kleider>.from(json["kleider"].map((x) => Kleider.fromJson(x))),
-        schuhe: List<Kleider>.from(json["schuhe"].map((x) => Kleider.fromJson(x))),
-        tasche: List<Kleider>.from(json["tasche"].map((x) => Kleider.fromJson(x))),
-    );
-
-    Map<String, dynamic> toJson() => {
-        "sale": List<dynamic>.from(sale.map((x) => x.toJson())),
-        "neu": List<dynamic>.from(neu.map((x) => x.toJson())),
-        "kleider": List<dynamic>.from(kleider.map((x) => x.toJson())),
-        "schuhe": List<dynamic>.from(schuhe.map((x) => x.toJson())),
-        "tasche": List<dynamic>.from(tasche.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data.map((x) => List<dynamic>.from(x.map((x) => x.toJson())))),
     };
 }
 
@@ -71,6 +39,7 @@ class Kleider {
         this.presentPrice,
         this.goodsName,
         this.goodsId,
+        this.itemId,
     });
 
     String image;
@@ -78,6 +47,7 @@ class Kleider {
     double presentPrice;
     String goodsName;
     String goodsId;
+    String itemId;
 
     factory Kleider.fromJson(Map<String, dynamic> json) => Kleider(
         image: json["image"],
@@ -85,6 +55,7 @@ class Kleider {
         presentPrice: json["presentPrice"].toDouble(),
         goodsName: json["goodsName"],
         goodsId: json["goodsId"],
+        itemId: json["itemId"]
     );
 
     Map<String, dynamic> toJson() => {
@@ -93,9 +64,9 @@ class Kleider {
         "presentPrice": presentPrice,
         "goodsName": goodsName,
         "goodsId": goodsId,
+        "itemId": itemId
     };
 }
-
 
 // import 'dart:convert';
 

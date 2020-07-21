@@ -40,7 +40,6 @@ class _HomeContentState extends State<HomeContent> {
             return Center(child: CircularProgressIndicator());
           }
           if(snapshot.hasData){
-            // print(snapshot.data['sneaker'].toString());
             var data = json.decode(snapshot.data.toString());
             // var data = snapshot.data.toList();
             List<Map> swiper = (data['banner'] as List).cast();

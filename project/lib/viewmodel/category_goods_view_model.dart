@@ -13,5 +13,12 @@ class CategoryGoodsViewModel with ChangeNotifier{
       notifyListeners();
     }
 
+    set setGoodsItems(List<List<Kleider>> goodsList) {
+      for(var k in _goodsList) {
+        _goodsList.add(k);
+      }
+      notifyListeners();
+    }
+
     
 }

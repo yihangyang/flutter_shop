@@ -82,16 +82,14 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
 
   void _getGoodList({String categoryId})  {
     var data = {
-      'categoryId': categoryId==null ? '4' : categoryId,
+      'categoryId': categoryId==null ? '1' : categoryId,
       'categorySubId': '',
       'page': 1
     };
     request('kleider').then((val) {
       var data = json.decode(val.toString());
-      print(data['data']["sale"]);
       CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
-      print(goodsList.toString());
-      // Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data.kleider;
+      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data[int.parse(categoryId)-1];
     });
   }
 }

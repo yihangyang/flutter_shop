@@ -1,89 +1,271 @@
 {
-  "code": "0",
-  "message": "success",
-  "data": [
-      [
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
-              "oriPrice": 2.50,
-              "presentPrice": 1.80,
-              "goodsName": "sale1",
-              "goodsId": "11"
-          },
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
-              "oriPrice": 2.00,
-              "presentPrice": 1.80,
-              "goodsName": "sale2",
-              "goodsId": "12"
-          },
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
-              "oriPrice": 2.00,
-              "presentPrice": 1.80,
-              "goodsName": "sale3",
-              "goodsId": "13"
-          }
-      ],
-      [
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
-              "oriPrice": 2.50,
-              "presentPrice": 1.80,
-              "goodsName": "neu1",
-              "goodsId": "21"
-          },
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
-              "oriPrice": 2.00,
-              "presentPrice": 1.80,
-              "goodsName": "neu2",
-              "goodsId": "22"
-          }],
-      [
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
-              "oriPrice": 2.50,
-              "presentPrice": 1.80,
-              "goodsName": "kleider1",
-              "goodsId": "31"
-          },
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
-              "oriPrice": 2.00,
-              "presentPrice": 1.80,
-              "goodsName": "kleider2",
-              "goodsId": "32"
-          }],
-      [
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
-              "oriPrice": 2.50,
-              "presentPrice": 1.80,
-              "goodsName": "schuhe1",
-              "goodsId": "41"
-          },
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
-              "oriPrice": 2.00,
-              "presentPrice": 1.80,
-              "goodsName": "schuhe2",
-              "goodsId": "42"
-          }],
-      [
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
-              "oriPrice": 2.50,
-              "presentPrice": 1.80,
-              "goodsName": "tasche1",
-              "goodsId": "51"
-          },
-          {
-              "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
-              "oriPrice": 2.00,
-              "presentPrice": 1.80,
-              "goodsName": "tasche2",
-              "goodsId": "52"
-          }]
-  ]
+    "code": "0",
+    "message": "success",
+    "data": [
+        [
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Sale-Favoriten",
+                "goodsId": "11",
+                "itemId": "111"
+
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Kleidung(1)",
+                "goodsId": "12",
+                "itemId": "111"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Kleidung(2)",
+                "goodsId": "12",
+                "itemId": "122"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Schuhe1",
+                "goodsId": "13",
+                "itemId": "131"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Schuhe2",
+                "goodsId": "13",
+                "itemId": "132"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Schuhe3",
+                "goodsId": "13",
+                "itemId": "133"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Schuhe4",
+                "goodsId": "13",
+                "itemId": "134"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Accessoires",
+                "goodsId": "14",
+                "itemId": "141"
+            }
+        ],
+        [
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "neu1",
+                "goodsId": "21",
+                "itemId": "211"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "neu2",
+                "goodsId": "22",
+                "itemId": "212"
+            }],
+        [
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "kleider",
+                "goodsId": "31",
+                "itemId": "311"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "T-shirt",
+                "goodsId": "32",
+                "itemId": "321"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Shorts",
+                "goodsId": "33",
+                "itemId": "331"
+            }],
+        [
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Sandaler1",
+                "goodsId": "41",
+                "itemId": "411"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Sandaler2",
+                "goodsId": "41",
+                "itemId": "412"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Sandaler3",
+                "goodsId": "41",
+                "itemId": "413"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Sandaler4",
+                "goodsId": "41",
+                "itemId": "414"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Sportschuhe",
+                "goodsId": "42",
+                "itemId": "421"
+            }],
+        [
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "tasche1",
+                "goodsId": "51",
+                "itemId": "511"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "tasche2",
+                "goodsId": "52",
+                "itemId": "521"
+            }],
+        [
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Punge1",
+                "goodsId": "61",
+                "itemId": "611"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Schmuck1",
+                "goodsId": "62",
+                "itemId": "621"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Gürtel",
+                "goodsId": "63",
+                "itemId": "631"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Sonnenbrille",
+                "goodsId": "64",
+                "itemId": "641"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Handyhülle",
+                "goodsId": "65",
+                "itemId": "651"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Strumpfhosen",
+                "goodsId": "66",
+                "itemId": "661"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Strumpfhosen",
+                "goodsId": "67",
+                "itemId": "671"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Nagellack",
+                "goodsId": "68",
+                "itemId": "681"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Prüfmen",
+                "goodsId": "69",
+                "itemId": "691"
+            }],
+        [
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190116145309_40.jpg",
+                "oriPrice": 2.50,
+                "presentPrice": 1.80,
+                "goodsName": "Summer looks",
+                "goodsId": "71",
+                "itemId": "711"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Twinsets",
+                "goodsId": "72",
+                "itemId": "721"
+            },
+            {
+                "image": "http://images.baixingliangfan.cn/compressedPic/20190115185215_1051.jpg",
+                "oriPrice": 2.00,
+                "presentPrice": 1.80,
+                "goodsName": "Comfy",
+                "goodsId": "73",
+                "itemId": "731"
+            }]
+    ]
 }
