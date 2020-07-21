@@ -45,10 +45,9 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
         isClick = (index == cVM.childIndex) ? true:false;
         return InkWell(
           onTap: () {
-            print(item.mallSubName);
+            print(item.mallSubName + '_rightInkWell');
             cVM.changeChildIndex(index, item.mallCategoryId);
             _getGoodList(item.mallSubId);
-
           },
           child: Container(
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
@@ -73,9 +72,16 @@ class _CategoryRightNavState extends State<CategoryRightNav> {
     };
     request('kleider').then((val) {
       var data = json.decode(val.toString());
-      print(data['data'][1]);
+      // print(goodsList.data.kleider);
+      // print(data['data'][1] + " _getGoodList");
       CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
-      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data;
+      print(goodsList.data.sale);
+      print(Fruit.values[1]);
+      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data.sale;
     });
   }
+}
+
+enum Fruit {
+  apple, banana
 }

@@ -88,9 +88,10 @@ class _CategoryLeftNavState extends State<CategoryLeftNav> {
     };
     request('kleider').then((val) {
       var data = json.decode(val.toString());
-      // print(data['data'][1]);
+      print(data['data']["sale"]);
       CategoryGoodsModel goodsList = CategoryGoodsModel.fromJson(data);
-      Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data;
+      print(goodsList.toString());
+      // Provider.of<CategoryGoodsViewModel>(context, listen: false).setGoodsList = goodsList.data.kleider;
     });
   }
 }
