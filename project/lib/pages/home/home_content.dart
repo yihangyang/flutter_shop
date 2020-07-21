@@ -9,6 +9,7 @@ import 'package:flutter_shop/pages/home/widgets/home_floor.dart';
 import 'package:flutter_shop/pages/home/widgets/home_swiper.dart';
 import 'package:flutter_shop/pages/home/widgets/home_top_nav.dart';
 import 'package:flutter_shop/pages/home/widgets/home_recommend.dart';
+import 'package:flutter_shop/routers/application.dart';
 import 'package:flutter_shop/service/service_methods.dart';
 
 class HomeContent extends StatefulWidget {
@@ -116,7 +117,9 @@ class _HomeContentState extends State<HomeContent> {
     if(hotGoodsList.length != 0) {
       List<Widget> _listWidget = hotGoodsList.map((val) {
         return InkWell(
-          onTap: () {},
+          onTap: () {
+            Application.router.navigateTo(context, "/detail?id=${val['goodsId']}");
+          },
           child: Container(
             width: ScreenUtil().setWidth(372),
             color: Colors.white,

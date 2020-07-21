@@ -27,5 +27,6 @@ const servicePath = {
   'homePageBelowContent': serviceUrl + 'homePageBelowContent.json', // home page hot sales
   'category': serviceUrl + 'mydata/category.json', // getCategory
   'mallGoods': serviceUrl + 'mallGoods.json', // mall Goods
-  'kleider': serviceUrl + "mydata/kleider.json"
+  'kleider': serviceUrl + "mydata/kleider.json", // clothes list
+  'goodDetail': serviceUrl + "detail.json", // item detail info
 };

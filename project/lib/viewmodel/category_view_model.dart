@@ -31,7 +31,7 @@ class CategoryViewModel extends ChangeNotifier {
     categoryId = id;
     
     SubCategory all = SubCategory(
-      mallSubId: '00',
+      mallSubId: '',
       mallCategoryId: '00',
       mallSubName: 'All',
       comments: '',
