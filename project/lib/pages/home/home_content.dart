@@ -117,9 +117,7 @@ class _HomeContentState extends State<HomeContent> {
     if(hotGoodsList.length != 0) {
       List<Widget> _listWidget = hotGoodsList.map((val) {
         return InkWell(
-          onTap: () {
-            Application.router.navigateTo(context, "/detail?id=${val['goodsId']}");
-          },
+          onTap: () {},
           child: Container(
             width: ScreenUtil().setWidth(372),
             color: Colors.white,

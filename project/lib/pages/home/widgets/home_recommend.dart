@@ -15,7 +15,6 @@ class HomeRecommend extends StatelessWidget {
         children: <Widget>[
           _titleWidget(),
           _recommendLst(),
-
         ],
       ),
     );

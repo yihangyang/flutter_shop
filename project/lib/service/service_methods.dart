@@ -14,7 +14,7 @@ Future request(url, {formData}) async{
     // var formData = {'lon': '115.02932','lat': '35.76189'};
     if(formData == null){
       res = await dio.get(servicePath[url],);
-    }else {
+    } else {
       res = await dio.post(servicePath[url], data: formData,);
     }
     

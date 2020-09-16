@@ -20,11 +20,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // import fluro router
     final router = Router();
     Routes.configRoutes(router);
     Application.router = router;
     return MaterialApp(
       title: 'Flutter Shop',
+      // fluro
       onGenerateRoute: Application.router.generator,
       debugShowCheckedModeBanner: false,
       

@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_shop/pages/detail/detail_page.dart';
 
 Handler detailsHandler = Handler(
-  handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-    String goodsId = params['id'].first;
-    print('index>details goodsId is ${goodsId}');
-    return DetailPage(goodsId: goodsId);
+  handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    String itemId = params['id'].first;
+    // print('index>details goodsId is ${itemId}');
+    return DetailPage(itemId: itemId);
   }
 );

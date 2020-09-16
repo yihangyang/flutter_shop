@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_shop/routers/application.dart';
 import 'package:flutter_shop/viewmodel/category_goods_view_model.dart';
 import 'package:flutter_shop/viewmodel/category_view_model.dart';
 import 'package:provider/provider.dart';
@@ -39,9 +40,11 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
 
   
 
-  Widget _listWidget(List newList,int index){
+  Widget _listWidget(List newList, int index){
     return InkWell(
-      onTap: (){},
+      onTap: (){
+        Application.router.navigateTo(context, "/detail?id=${newList[index].itemId}");
+      },
       child: Container(
         padding: EdgeInsets.only(top: 5.0,bottom: 5.0),
         decoration: BoxDecoration(
@@ -53,12 +56,12 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
         
         child: Row(
           children: <Widget>[
-            _goodsImage(newList,index)
+            _goodsImage(newList, index)
            ,
             Column(
               children: <Widget>[
-                _goodsName(newList,index),
-                _goodsPrice(newList,index)
+                _goodsName(newList, index),
+                _goodsPrice(newList, index)
               ],
             )
           ],
